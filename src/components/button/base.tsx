@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import React from "react";
+import "./button.scss";
 
 export default function bxButton(props) {
-  return <div>test</div>;
+  return <Button>{props.children}</Button>;
 }
