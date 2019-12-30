@@ -2,11 +2,12 @@
   "name": "bxbootstrap",
   "version": "1.0.5",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./esm/index.js",
   "types": "./typing",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "npm run tsc && npm version patch && npm publish",
+    "publish-esm": "tsc -m es6 --outDir esm --moduleResolution node",
     "tsc": "tsc && npm pack"
   },
   "keywords": [],
@@ -17,11 +18,9 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "react-bootstrap": "^1.0.0-beta.16"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0"
   },
   "files": [
     "dist",
